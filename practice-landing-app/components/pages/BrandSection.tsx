@@ -37,7 +37,7 @@ const BrandSection = () => {
                             
                             <div className='flex flex-col'>
                                 <hr className="my-4 border-gray-200 group-hover:border-gray-700" />
-                                <button className="px-3 py-1 rounded bg-gray-100 text-xs text-[#696969] group-hover:bg-gray-800 group-hover:text-white transition w-fit border border-gray-200 group-hover:border-none">
+                                <button className="px-3 py-1 rounded bg-gray-100 text-xs text-[#696969] group-hover:bg-gray-600 group-hover:text-white transition w-fit border border-gray-200 group-hover:border-none">
                                     LOREM IPSUM
                                 </button>
                             </div>    
