@@ -50,7 +50,7 @@ const PrivacyCoursel = () => {
                       className="w-full object-contain"
                     />
                   </div>
-                  <button className="rounded bg-gray-100 text-sm font-light uppercase tracking-wide mb-4 text-[#696969] transition w-fit border border-gray-200 shadow-sm">
+                  <button className="rounded bg-gray-100 p-[2px] text-sm font-light uppercase tracking-wide mb-4 text-[#696969] transition w-fit border border-gray-200 shadow-sm">
                     {device.tag}
                     </button>
                   <p className="text-[#000000] text-lg font-light">{device.title}</p>

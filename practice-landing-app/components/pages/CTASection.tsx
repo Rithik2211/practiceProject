@@ -2,34 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import { Button } from '../ui/button'
 import { ArrowRight } from 'lucide-react'
+import AnimatedButton from './AnimatedButton'
 
 const CTASection = () => {
     return (
         <>
             <section className='w-full relative overflow-visible'>
 
-                {/* Green gradient */}
-                {/* <div className="absolute -top-20 -left-24 z-3">
-                    <Image
-                        src="/cta/green.svg"
-                        alt="CTA"
-                        width={300}
-                        height={300}
-                    />
-                </div> */}
-
-                {/* Blue gradient */}
-                {/* <div className="absolute bottom-20 -right-45 z-1">
-                    <Image
-                        src="/cta/blue.svg"
-                        alt="CTA"
-                        width={300}
-                        height={300}
-                    />
-                </div> */}
-
                 {/* Green gradient - responsive positioning */}
-                <div className="absolute -top-12 -left-12 sm:-top-16 sm:-left-16 md:-top-20 md:-left-24 lg:-top-24 lg:-left-32 z-3">
+                <div className="absolute -top-12 -left-12 sm:-top-16 sm:-left-16 md:-top-14 md:-left-24 lg:-top-14 lg:-left-32 z-3">
                     <Image
                         src="/cta/green.svg"
                         alt="CTA"
@@ -74,7 +55,7 @@ const CTASection = () => {
                         </p>
 
                         <div className="mb-6">
-                            <Button className="bg-black hover:bg-gray-800 text-white px-10 py-3 rounded-xl">Start free trial <ArrowRight className="w-4 h-4" /></Button>
+                        <AnimatedButton />
                         </div>
 
                         <p className="text-sm text-[#8F8F8F]">

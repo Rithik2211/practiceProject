@@ -1,11 +1,13 @@
 import AnalyticsSection from "@/components/pages/AnalyticsSection";
+import AnimatedButton from "@/components/pages/AnimatedButton";
 import AppSection from "@/components/pages/AppSection";
 import BrandSection from "@/components/pages/BrandSection";
 import CTASection from "@/components/pages/CTASection";
+import EventsSection from "@/components/pages/EventsSection";
 import NavigationBar from "@/components/pages/NavigationBar";
 import PrivacyCoursel from "@/components/pages/PrivacyCoursel";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 export default function Home() {
   return (
@@ -21,7 +23,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
           </p>
-          <Button className="bg-black hover:bg-gray-800 text-white px-10 py-3 mb-4 rounded-xl">Start free trial <ArrowRight className="w-4 h-4" /></Button>
+          <AnimatedButton />
           <p className="text-sm text-[#8F8F8F] mb-12">
               Free plan • No card required
           </p>
@@ -30,41 +32,7 @@ export default function Home() {
       </section>
 
       {/* Events and calenders */}
-      <section className="px-4 py-16">
-        <div className="mx-auto w-full">
-          <div className="flex flex-row flex-wrap max-w-6xl mb-8">
-            <h2 className="text-[50px] font-light text-[#000000] pr-6">Excepteur sint occaecat dolore</h2>
-            <div className="text-[#0B79AF] flex flex-row pr-6 text-[50px] font-light gap-2">
-              <Image src={'/event/mail.svg'} width={40} height={40} alt="mail" />
-              Email
-            </div>
-            <div className="text-[#AF5883] flex flex-row pr-6 text-[50px] font-light gap-2">
-              <Image src={'/event/event.svg'} width={40} height={40} alt="mail" />
-              Events
-            </div>
-            <div className="text-[#00A05E] flex flex-row pr-6 text-[50px] font-light gap-2">
-              <Image src={'/event/file.svg'} width={40} height={40} alt="mail" />
-              Files
-            </div>
-            <div className="text-[#4368E3] flex flex-row pr-6 text-[50px] font-light gap-2">
-              <Image src={'/event/document.svg'} width={40} height={40} alt="mail" />
-              Documents
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item}>
-                <h2 className="font-semibold text-[#000000] mb-3">Lorem Ipsum</h2>
-                <p className="text-[#AFAFAF] text-md leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <EventsSection />
 
       {/* Analytics section */}
       <AnalyticsSection />
@@ -81,15 +49,6 @@ export default function Home() {
       {/* CTA Section */}
       <CTASection />
 
-      {/* Blue gradient */}
-      <div className="absolute bottom-0 right-0 z-[-10]">
-          <Image
-              src="/cta/blue.svg"
-              alt="CTA"
-              width={200}
-              height={200}
-          />
-      </div>
     </div>
   );
 }

@@ -54,7 +54,6 @@ const NavigationBar = () => {
 
   return (
     <>
-    {/* max-w-[55%]  px-2 bg-black text-white rounded-2xl */}
         <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-100 w-full max-w-[55%]">
             <nav className="bg-black/90 backdrop-blur-lg text-white rounded-xl border border-gray-800/50 shadow-2xl">
                     <div className="flex justify-between items-center h-11 px-1">
@@ -69,15 +68,15 @@ const NavigationBar = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-8">
-                        <NavigationMenu>
+                        <NavigationMenu viewport={false}>
                         <NavigationMenuList className="space-x-2 bg-black text-white">
                             {/* Product Dropdown */}
                             <NavigationMenuItem>
-                            <NavigationMenuTrigger className="bg-transparent text-white font-medium px-3 py-1 rounded-md text-sm">
+                            <NavigationMenuTrigger className="!bg-black !text-white hover:!bg-black focus:!bg-black active:!bg-black font-medium px-3 py-1 rounded-md text-sm">
                                 Product
                             </NavigationMenuTrigger>
-                            <NavigationMenuContent className="bg-black text-white border-0">
-                                <div className="w-[130px] p-1">
+                            <NavigationMenuContent className="!bg-black !text-white border-0">
+                                <div className="w-[130px]">
                                 <div className="flex flex-col gap-2 items-start justify-center">
                                     {productItems.map((item) => (
                                     <NavigationMenuLink key={item.title} asChild>
@@ -98,8 +97,8 @@ const NavigationBar = () => {
                             <NavigationMenuItem>
                             <NavigationMenuLink asChild>
                                 <Link 
-                                href="/pricing"
-                                className="text-white font-medium px-3 py-1 rounded-md text-sm"
+                                href="/"
+                                className="!bg-black !text-white hover:!bg-black focus:!bg-black active:!bg-black font-medium px-3 py-1 rounded-md text-sm"
                                 >
                                 Pricing
                                 </Link>
@@ -108,33 +107,33 @@ const NavigationBar = () => {
 
                             {/* Blog Dropdown */}
                             <NavigationMenuItem>
-                            <NavigationMenuTrigger className="bg-transparent text-white font-medium px-3 py-1 rounded-md text-sm">
+                            <NavigationMenuTrigger className="!bg-black !text-white hover:!bg-black focus:!bg-black active:!bg-black font-medium px-3 py-1 rounded-md text-sm">
                                 Blog
                             </NavigationMenuTrigger>
-                            <NavigationMenuContent className="bg-black text-white border-0">
+                            <NavigationMenuContent className="!bg-black !text-white border-0">
                                 <div className="w-[130px] p-1">
-                                <div className="flex flex-col gap-2 items-start justify-center">
-                                    {blogItems.map((item) => (
-                                    <NavigationMenuLink key={item.title} asChild>
-                                        <div className="flex flex-row gap-2">
-                                            <Image src={item.href} alt="Arrow Right" width={20} height={20} />
-                                            <div className="font-medium mb-1">
-                                                {item.title}
+                                    <div className="flex flex-col gap-2 items-start justify-center">
+                                        {blogItems.map((item) => (
+                                        <NavigationMenuLink key={item.title} asChild>
+                                            <div className="flex flex-row gap-2">
+                                                <Image src={item.href} alt="Arrow Right" width={20} height={20} />
+                                                <div className="font-medium mb-1">
+                                                    {item.title}
+                                                </div>
                                             </div>
-                                        </div>
-                                    </NavigationMenuLink>
-                                    ))}
-                                </div>
+                                        </NavigationMenuLink>
+                                        ))}
+                                    </div>
                                 </div>
                             </NavigationMenuContent>
                             </NavigationMenuItem>
 
                             {/* Resources Dropdown */}
                             <NavigationMenuItem>
-                            <NavigationMenuTrigger className="bg-transparent text-white font-medium px-3 py-1 rounded-md text-sm">
+                            <NavigationMenuTrigger className="!bg-black !text-white hover:!bg-black focus:!bg-black active:!bg-black font-medium px-3 py-1 rounded-md text-sm">
                                 Resources
                             </NavigationMenuTrigger>
-                            <NavigationMenuContent className="bg-black text-white border-0">
+                            <NavigationMenuContent className="!bg-black !text-white border-0">
                                 <div className="w-[130px] p-1">
                                 <div className="flex flex-col gap-2 items-start justify-center">
                                     {resourceItems.map((item) => (
@@ -156,26 +155,27 @@ const NavigationBar = () => {
                             <NavigationMenuItem>
                             <NavigationMenuLink asChild>
                                 <Link 
-                                href="/download"
-                                className="text-white font-medium px-3 py-1 rounded-md text-sm"
+                                href="/"
+                                className="!bg-black !text-white hover:!bg-black focus:!bg-black active:!bg-black font-medium px-3 py-1 rounded-md text-sm"
                                 >
                                 Download
                                 </Link>
                             </NavigationMenuLink>
                             </NavigationMenuItem>
                         </NavigationMenuList>
+                        
                         </NavigationMenu>
                     </div>
 
                     {/* Desktop Auth Buttons */}
                     <div className="hidden xl:flex items-center space-x-4">
                         <Link 
-                        href="/signin"
+                        href="/"
                         className="text-white font-medium px-3 py-1 text-sm"
                         >
                         Sign in
                         </Link>
-                        <Button className="bg-white text-black dark:text-white py-1">
+                        <Button className="!bg-white !text-black hover:!bg-white focus:!bg-white active:!bg-white font-medium px-3 py-1 rounded-md text-sm">
                             Start for free
                         </Button>
                     </div>
@@ -204,21 +204,19 @@ const NavigationBar = () => {
                             <h3 className="font-semibold text-white mb-2 px-3">Product</h3>
                             <div className="space-y-1 pl-4">
                             {productItems.map((item) => (
-                                <Link
-                                key={item.title}
-                                href={item.href}
-                                className="block px-3 py-2 text-gray-400 rounded-md transition-colors duration-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                {item.title}
-                                </Link>
+                                <div className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                                    <Image src={item.href} alt="Arrow Right" width={20} height={20} />
+                                    <div className="font-medium mb-1">
+                                        {item.title}
+                                    </div>
+                                </div>
                             ))}
                             </div>
                         </div>
 
                         {/* Mobile Pricing */}
                         <Link
-                            href="/pricing"
+                            href="/"
                             className="block px-3 py-2 text-white rounded-md font-medium transition-colors duration-200"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
@@ -230,14 +228,12 @@ const NavigationBar = () => {
                             <h3 className="font-semibold text-white mb-2 px-3">Blog</h3>
                             <div className="space-y-1 pl-4">
                             {blogItems.map((item) => (
-                                <Link
-                                key={item.title}
-                                href={item.href}
-                                className="block px-3 py-2 text-gray-400 rounded-md transition-colors duration-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                {item.title}
-                                </Link>
+                                <div className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                                    <Image src={item.href} alt="Arrow Right" width={20} height={20} />
+                                    <div className="font-medium mb-1">
+                                        {item.title}
+                                    </div>
+                                </div>
                             ))}
                             </div>
                         </div>
@@ -247,21 +243,19 @@ const NavigationBar = () => {
                             <h3 className="font-semibold text-white mb-2 px-3">Resources</h3>
                             <div className="space-y-1 pl-4">
                             {resourceItems.map((item) => (
-                                <Link
-                                key={item.title}
-                                href={item.href}
-                                className="block px-3 py-2 text-gray-400 rounded-md transition-colors duration-200"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                {item.title}
-                                </Link>
+                                <div className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                                    <Image src={item.href} alt="Arrow Right" width={20} height={20} />
+                                    <div className="font-medium mb-1">
+                                        {item.title}
+                                    </div>
+                                </div>
                             ))}
                             </div>
                         </div>
 
                         {/* Mobile Download */}
                         <Link
-                            href="/download"
+                            href="/"
                             className="block px-3 py-2 text-white rounded-md font-medium transition-colors duration-200"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
@@ -271,14 +265,14 @@ const NavigationBar = () => {
                         {/* Mobile Auth Buttons */}
                         <div className="pt-4 border-t border-gray-200 space-y-2 px-4">
                             <Link
-                            href="/signin"
+                            href="/"
                             className="block w-full text-center px-4 py-2 text-white font-medium border border-gray-300 rounded-lg transition-colors duration-200"
                             onClick={() => setIsMobileMenuOpen(false)}
                             >
                             Sign in
                             </Link>
                             <Link
-                            href="/signup"
+                            href="/"
                             className="block w-full text-center px-4 py-2 text-white font-medium rounded-lg transition-colors duration-200"
                             onClick={() => setIsMobileMenuOpen(false)}
                             >
