@@ -6,9 +6,8 @@ const AppSection = () => {
   return (
    <>
    <section className="px-4 py-16">
-        <div className="max-w-7xl mx-auto bg-white rounded-2xl p-12 shadow border border-gray-200 flex flex-col lg:flex-row justify-between items-center gap-8 relative overflow-hidden">
-          {/* Left Content */}
-          <div className="flex-1">
+        <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow border border-gray-200 flex flex-col lg:flex-row justify-between items-center relative overflow-hidden">
+          <div className="flex-1  p-12">
             <h2 className="text-3xl md:text-4xl font-light text-black mb-12">
               Egestas viverra senectus?
             </h2>
@@ -23,15 +22,15 @@ const AppSection = () => {
             </a>
           </div>
 
-          <div className="hidden xl:block xl:absolute xl:right-3 xl:bottom-0 xl:w-2/4">
-                <Image
-                  src="/analytic/mobile.svg"
-                  alt="Overview"
-                  width={500}
-                  height={208}
-                  className="w-full object-cover"
-                />
-              </div>
+          <div className="w-4/6 lg:w-3/6 lg:pr-8">
+              <Image
+                src="/analytic/mobile.svg"
+                alt="Overview"
+                width={500}
+                height={208}
+                className="w-full object-cover"
+              />
+            </div>
         </div>
       </section>
    </>

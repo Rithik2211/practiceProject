@@ -8,14 +8,14 @@ const AnalyticsSection = () => {
             <section className="px-4 py-16 bg-white rounded-lg border border-gray-200">
                 <div className="max-w-6xl mx-auto space-y-8">
                     {/* Top Card */}
-                    <div className="bg-white shadow rounded-xl p-6 border border-gray-100 relative overflow-hidden min-h-[380px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[500px]">
+                    <div className="bg-white shadow rounded-xl border border-gray-100 relative overflow-hidden min-h-[330px] sm:min-h-[420px] md:min-h-[460px] lg:min-h-[500px] flex flex-col justify-between">
                         <div className="absolute top-4 right-4 z-2">
                             <div className="p-2 rounded-full border border-gray-200 cursor-pointer transition-all duration-300 ease-in-out hover:bg-black hover:border-black group">
                                 <ArrowUpRight className="w-4 h-4 text-gray-600 transition-all duration-300 ease-in-out group-hover:text-white group-hover:rotate-45" />
                             </div>
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-6 items-start relative z-1">
+                        <div className="flex flex-col md:flex-row gap-6 items-start relative z-1 p-6">
                             <div className="space-y-2 flex-1 max-w-md">
                                 <div className="w-8 h-5 bg-[#BBE2F5] rounded-sm shadow-sm" />
                                 <h2 className="font-semibold text-gray-900">Duis aute irure dolor in reprehenderit</h2>
@@ -25,11 +25,11 @@ const AnalyticsSection = () => {
                             </div>
                         </div>
 
-                        <div className="absolute bottom-0 md:left-1/3 w-9/10 md:w-2/4 lg:w-3/5">
+                        <div className="w-full flex items-center justify-center">
                             <Image
                                 src="/analytic/analytic1.svg"
                                 alt="Overview"
-                                width={500}
+                                width={300}
                                 height={208}
                                 className="rounded-b-xl w-full object-cover"
                             />

@@ -21,7 +21,7 @@ const CTASection = () => {
                 </div>
 
                 {/* Blue gradient - responsive positioning */}
-                <div className="absolute bottom-12 -right-12 sm:bottom-16 sm:-right-16 md:bottom-20 md:-right-24 lg:bottom-20 lg:-right-32 z-1">
+                <div className="absolute bottom-12 -right-12 sm:bottom-16 sm:-right-14 md:bottom-20 md:-right-24 lg:bottom-20 lg:-right-25 z-1">
                     <Image
                         src="/cta/blue.svg"
                         alt="CTA"

@@ -54,7 +54,7 @@ const NavigationBar = () => {
 
   return (
     <>
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-100 w-full max-w-[55%]">
+        <div className="absolute top-2 md:top-8 left-1/2 transform -translate-x-1/2 z-100 w-full max-w-[55%]">
             <nav className="bg-black/90 backdrop-blur-lg text-white rounded-xl border border-gray-800/50 shadow-2xl">
                     <div className="flex justify-between items-center h-11 px-1">
 
@@ -203,8 +203,8 @@ const NavigationBar = () => {
                         <div>
                             <h3 className="font-semibold text-white mb-2 px-3">Product</h3>
                             <div className="space-y-1 pl-4">
-                            {productItems.map((item) => (
-                                <div className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                            {productItems.map((item, index) => (
+                                <div key={index} className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                                     <Image src={item.href} alt="Arrow Right" width={20} height={20} />
                                     <div className="font-medium mb-1">
                                         {item.title}
@@ -227,8 +227,8 @@ const NavigationBar = () => {
                         <div>
                             <h3 className="font-semibold text-white mb-2 px-3">Blog</h3>
                             <div className="space-y-1 pl-4">
-                            {blogItems.map((item) => (
-                                <div className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                            {blogItems.map((item, index) => (
+                                <div key={index} className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                                     <Image src={item.href} alt="Arrow Right" width={20} height={20} />
                                     <div className="font-medium mb-1">
                                         {item.title}
@@ -242,8 +242,8 @@ const NavigationBar = () => {
                         <div>
                             <h3 className="font-semibold text-white mb-2 px-3">Resources</h3>
                             <div className="space-y-1 pl-4">
-                            {resourceItems.map((item) => (
-                                <div className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                            {resourceItems.map((item, index) => (
+                                <div key={index} className="flex flex-row gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                                     <Image src={item.href} alt="Arrow Right" width={20} height={20} />
                                     <div className="font-medium mb-1">
                                         {item.title}
