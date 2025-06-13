@@ -23,9 +23,9 @@ const TextEditor = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [placeholders.length]);
 
-  const handleKeyDown = (e : any) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Tab') {
       e.preventDefault();
       setText(placeholders[currentPlaceholderIndex]);
