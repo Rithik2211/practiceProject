@@ -23,20 +23,28 @@ const ClientMarque = () => {
   ]
 
   return (
-    <div className="relative flex w-full bg-[#181B1F] flex-col items-center justify-center overflow-hidden border-t-1 py-8 border-[#2B292E]">
-      <Marquee className="[--duration:20s]">
-        {brands.map((brand) => (
-            <div key={brand.name} className="text-center text-[#2B3036] px-8">
-                <Image src={brand.link} alt='logo' width={120} height={120} className='text-[#2B3036]'/>
+    <div className="relative w-full max-w-7xl mx-auto bg-[#181B1F] flex flex-col items-center justify-center border-t border-[#2B292E]">
+      <div className="w-full overflow-hidden px-4 md:px-12 lg:px-24">
+        <Marquee className="[--duration:20s] md:[--duration:25s] lg:[--duration:30s]">
+          {brands.map((brand) => (
+            <div key={brand.name} className="flex-shrink-0 text-center text-[#2B3036] px-8">
+              <Image 
+                src={brand.link} 
+                alt={`${brand.name} logo`} 
+                width={100}
+                height={100}
+                className="w-24 h-24 xl:w-28 xl:h-28 object-contain text-[#2B3036]"
+              />
             </div>
-        ))}
-      </Marquee>
-      <div className='flex flex-row justify-between items-center pt-3'>
+          ))}
+        </Marquee>
+      </div>
+      <div className='flex flex-row w-full justify-between items-center px-4 md:px-12 lg:px-24'>
         <a
             href="https://example.com/case-study-left"
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute left-4 bottom-4 text-xs border border-gray-600 px-3 py-1 rounded-[5px] bg-[#2B3036] hover:bg-white hover:text-black transition"
+            className="text-xs border border-gray-600 px-3 py-1 rounded-[5px] bg-[#2B3036] hover:bg-white hover:text-black transition"
         >
             CASE STUDY
         </a>
@@ -44,7 +52,7 @@ const ClientMarque = () => {
             href="https://example.com/case-study-right"
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute right-4 bottom-4 text-xs border border-gray-600 px-3 py-1 rounded-[5px] bg-[#2B3036] hover:bg-white hover:text-black transition"
+            className="text-xs border border-gray-600 px-3 py-1 rounded-[5px] bg-[#2B3036] hover:bg-white hover:text-black transition"
         >
             CASE STUDY
         </a>
