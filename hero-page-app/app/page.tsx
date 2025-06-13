@@ -1,15 +1,12 @@
-'use client';
-
 import ClientMarque from '@/components/pages/ClientMarque';
 import TextEditor from '@/components/pages/TextEditor';
 import Image from 'next/image';
 
 export default function Home() {
-
   return (
     <div className="min-h-screen bg-[#181B1F] text-white py-10 font-sans flex flex-col items-center justify-center relative overflow-hidden">
 
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
         <div className="relative w-full h-full max-w-8xl mx-auto">
           {Array.from({ length: 8 }, (_, i) => (
             <div
@@ -37,12 +34,17 @@ export default function Home() {
         }}
       ></div>
 
+      {/* middle gradient color */}
+      <div className="absolute inset-0 flex items-center justify-center z-[5] pointer-events-none ">
+        <div className="w-full max-w-6xl h-80 bg-gradient-to-r from-transparent via-[#181B1F] to-transparent rounded-full transform scale-x-150 backdrop-blur-sm"></div>
+      </div>
+
       {/* Hero Text */}
       <div className="mt-20 text-center px-6 md:px-16 lg:px-24 relative z-20">
         <h1 className="text-[48px] md:text-6xl font-bold leading-tight">
           Lorem ipsum{" "}
           <span className="relative inline-block">
-            <span className="relative z-10">dolor sit</span>
+            <span className="relative z-20 ">dolor sit</span>
             <span
               className="absolute left-0 -bottom-2 w-full h-4 z-0 bg-no-repeat bg-contain bg-left"
               style={{ backgroundImage: 'url(/style.svg)' }}

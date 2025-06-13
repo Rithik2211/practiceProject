@@ -196,7 +196,6 @@ const NavigationBar = () => {
             {isMobileMenuOpen && (
                 <div className="xl:hidden bg-[#181B1F] border-t border-[#2B292E] text-white max-h-[calc(100vh-55px)] overflow-y-auto">
                     <div className="space-y-4 px-6 md:px-16 lg:px-24 py-4">
-                        {/* Mobile Platform Section */}
                         <div>
                             <h3 className="font-semibold text-white mb-2">Platform</h3>
                             <div className="space-y-1 pl-4">
